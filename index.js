@@ -12,11 +12,11 @@ app.get("/", (req, res, next) =>{
 });
 
 app.get("/about", (req, res, next) =>{
-    res.sendFile(__dirname + "public" + "about.html");
+    res.sendFile(__dirname + "/public" + "/about.html");
 });
 
 app.get("/contactUs", (req, res, next) =>{
-    res.sendFile(__dirname + "public" + "contactUs.html");
+    res.sendFile(__dirname + "/public" + "/contactUs.html");
 });
 
 const newUser = (email, password) =>{
