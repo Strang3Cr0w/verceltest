@@ -11,6 +11,14 @@ app.get("/", (req, res, next) =>{
     res.render("index");
 });
 
+app.get("/about", (req, res, next) =>{
+    res.sendFile(__dirname + "public" + "about.html");
+});
+
+app.get("/contactUs", (req, res, next) =>{
+    res.sendFile(__dirname + "public" + "contactUs.html");
+});
+
 const newUser = (email, password) =>{
     client.query('INSERT INTO users (email, password) VALUES ($1, $2) RETURNING email', [email, password], (err, results)=>{
         if(err){
